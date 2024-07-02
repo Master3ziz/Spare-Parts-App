@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/background_design2">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/profilePic"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:civ_border="true"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/purple_500"
+                        android:src="@drawable/profile_icon"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="148dp"
+                        android:layout_marginTop="105dp"
+                        android:visibility="gone"
+                        android:id="@+id/selectpic"
+                        android:src="@drawable/ic_menu_camera"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:id="@+id/cardView"
+                app:cardCornerRadius="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="170dp"
+                android:background="#FCF9F9">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/profilePercentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="16sp"
+                        android:text="Edit Your Profile Details"
+                        android:textColor="@color/purple_500" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardView"
+                android:id="@+id/relative"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Name"
+                    android:textColorHint="@color/purple_500">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/loginPassword"
+                        android:drawableLeft="@drawable/user_icon"
+                        android:background="@color/white"
+                        android:drawablePadding="5dp"
+                        android:textColor="#000"
+                        android:layout_alignLeft="@+id/loginPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imgeditName"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/name"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/edit_sign"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/business"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgeditName"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Email"
+                    android:textColorHint="@color/purple_500">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/loginPassword"
+                        android:drawableLeft="@drawable/business_icon"
+                        android:inputType="textEmailAddress"
+                        android:background="@color/white"
+                        android:drawablePadding="5dp"
+                        android:textColor="#000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loginPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/business"
+                    android:focusable="true"
+                    android:hint="Password"
+                    android:focusableInTouchMode="true"
+                    android:textColorHint="@color/purple_500"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignStart="@+id/loginPassword"
+                        android:background="@color/white"
+                        android:drawableStart="@drawable/password_icon"
+                        android:drawablePadding="5dp"
+                        android:inputType="textPassword"
+                        android:textColor="#000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Update Password"
+                    android:layout_below="@+id/loginPassword"
+                    android:layout_marginTop="36dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@color/purple_200"
+                    android:textColor="#fff"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSignOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Out"
+                    android:layout_below="@+id/btnDelete"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@color/purple_500"
+                    android:textColor="#fff"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_below="@+id/btnDelete"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

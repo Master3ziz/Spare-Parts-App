@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1096615892239",
+    "firebase_url": "https://b2c-car-spares-default-rtdb.firebaseio.com",
+    "project_id": "b2c-car-spares",
+    "storage_bucket": "b2c-car-spares.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096615892239:android:a8b41911d7cd65ca15da7a",
+        "android_client_info": {
+          "package_name": "com.app.car_spares"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD86YTWf2dzl1nW4gMezNFRtRjIuKXPYpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

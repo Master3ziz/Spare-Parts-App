@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:elevation="5dp"
+        android:id="@+id/cardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgPic"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/holder" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgPic"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Item Name"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgPic"
+                android:textSize="14sp"
+                android:layout_below="@+id/tvTitle"
+                android:id="@+id/tvPrice"
+                android:text="Price"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgPic"
+                android:textSize="14sp"
+                android:layout_below="@+id/tvPrice"
+                android:id="@+id/tvQty"
+                android:text="Qty"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"/>
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/imgPic"
+                android:src="@drawable/ic_delete"/>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="5sp"
+        android:layout_below="@+id/cardView"/>
+
+</RelativeLayout>
